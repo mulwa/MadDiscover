@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    tools:context=".Add_event">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appBar"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include
+            layout="@layout/toolbar"
+            android:id="@+id/toolbar"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_vertical_margin">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:id="@+id/eventImage"
+                android:layout_gravity="center"
+                android:background="@drawable/attach_image"
+                android:layout_height="150dp"
+                android:layout_marginBottom="5dp"/>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/textInputLayoutStyle"
+                android:id="@+id/tilEventTitle"
+                app:hintTextAppearance="@style/textHint">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/eventTitle"
+                    android:hint="@string/eventTitleHint"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/textInputLayoutStyle"
+                android:id="@+id/tilEventDescription"
+                app:hintTextAppearance="@style/textHint">
+
+                <EditText
+                    android:id="@+id/mdescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="top|start"
+                    android:hint="@string/eventDescriptionEvent"
+                    android:inputType="textMultiLine"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:lines="3"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:scrollHorizontally="false" />
+
+            </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:inputType="none"
+                    android:clickable="true"
+                    android:id="@+id/eventCategory"
+                    android:hint="@string/eventCategory"/>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/textInputLayoutStyle"
+                android:id="@+id/tilVenue"
+                app:hintTextAppearance="@style/textHint">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/eventVenueHint"
+                    android:id="@+id/eventVenue"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/eventDate"
+                android:textSize="18sp"
+                android:layout_marginBottom="@dimen/editTextMarginBottom"
+                android:layout_marginTop="@dimen/editTextMarginBottom"
+                android:text="@string/eventDateHint"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:background="@color/white"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linearLayoutDateFrom"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="@string/dateFrom"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:id="@+id/tveventDateFrom"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="5dp"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/linearLayoutDateTo"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="@string/dateTo"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="50dp"
+                        android:id="@+id/tveventDateTo"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+
+                        />
+                </LinearLayout>
+
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginBottom="@dimen/editTextMarginBottom"
+                android:layout_marginTop="@dimen/editTextMarginBottom"
+                android:text="@string/eventTimeHint"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/linearLayoutTimeFrom">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/timeFrom"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:id="@+id/tvStartTime"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linearLayoutTimeTo"
+                    android:layout_alignParentRight="true"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/timeTo"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:id="@+id/tvEndTime"/>
+                </LinearLayout>
+
+
+
+
+
+            </RelativeLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/textInputLayoutStyle"
+                android:id="@+id/tilOrganizer"
+                app:hintTextAppearance="@style/textHint">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/eventOrganizer"
+                    android:hint="@string/eventOrganizerHint"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                style="@style/textInputLayoutStyle"
+                android:id="@+id/tilContact"
+                app:hintTextAppearance="@style/textHint">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:id="@+id/eventOrganizerContact"
+                    android:hint="@string/mobileNumberHint"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/submitEvent"
+                android:textColor="@color/white"
+                android:id="@+id/btnUploadEvent"
+                android:background="@drawable/button_drawable"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

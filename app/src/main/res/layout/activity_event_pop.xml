@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.cj_sever.merchandisers.EventPop">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageLayout">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:background="@color/bottom_sheet_color"
+            android:layout_below="@+id/tvEventName"
+            android:id="@+id/popImage"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:text="EVENT NAME"
+            android:textStyle="bold|italic"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:fontFamily="sans-serif-condensed"
+            android:id="@+id/tvEventName"/>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvEventName"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="visible"
+            android:indeterminateDrawable="@drawable/imageprogressbar">
+        </ProgressBar>
+    </RelativeLayout>
+
+</RelativeLayout>

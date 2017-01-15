@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--<android.support.v7.widget.CardView-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:padding="5dp"-->
+        <!--android:elevation="@dimen/cardViewElevation">-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageLayout"
+                android:background="@color/bottom_sheet_color"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="@dimen/image_layout_width"
+                    android:layout_height="@dimen/image_layout_Height"
+                    android:scaleType="centerInside"
+                    android:id="@+id/imageThumbnail"/>
+                <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                    <!--android:id="@+id/imageThumbnail"-->
+                    <!--android:layout_width="@dimen/image_layout_width"-->
+                    <!--android:layout_height="@dimen/image_layout_Height"-->
+                    <!--app:civ_border_width="1dp"-->
+                    <!--app:civ_border_color="#fff"/>-->
+                <ProgressBar
+                    android:id="@+id/imageprogressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="visible"
+                    android:indeterminateDrawable="@drawable/imageprogressbar">
+                </ProgressBar>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/imageLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@color/black"
+                    android:id="@+id/tvTitle"
+                    android:textSize="20sp"
+                    android:text="Title Header"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvdescription"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="16sp"
+                    android:layout_below="@id/tvTitle"
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:lineSpacingExtra="5dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:text="The UK's premier Dancehall DJ Robbo Ranx delivers the heaviest radio show of it's kind. The 3 time Sony Radio Award "/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvamount"
+                    android:textColor="@color/black"
+                    android:layout_below="@+id/tvdescription"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="200/="/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/tvmobile"
+                    android:textSize="12sp"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@+id/tvdescription"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@color/black"
+                    android:text="0707200314"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    <!--</android.support.v7.widget.CardView>-->
+
+
+
+</LinearLayout>

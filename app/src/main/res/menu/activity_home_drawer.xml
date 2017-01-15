@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/adverts"
+            android:icon="@mipmap/view"
+            android:title="@string/advertsMenu" />
+        <item
+            android:id="@+id/addAdvert"
+            android:icon="@mipmap/view"
+            android:title="@string/addAdvertMenu" />
+        <item
+            android:id="@+id/events"
+            android:icon="@mipmap/view"
+            android:title="@string/eventsMenu" />
+        <item
+            android:id="@+id/addEvent"
+            android:icon="@mipmap/view"
+            android:title="@string/addEventMenu" />
+    </group>
+
+    <item android:title="My Account">
+        <menu>
+            <item
+                android:id="@+id/login"
+                android:icon="@drawable/user_account"
+                android:title="@string/loginMenu" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="My post" />
+        </menu>
+    </item>
+
+</menu>

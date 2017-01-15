@@ -1,0 +1,113 @@
+<resources>
+    <string name="app_name">Mad Discovery</string>
+    <string name="action_settings">Settings</string>
+    <string name="log_out">Log Out</string>
+
+    <!--advert post activity strings-->
+    <string name="advertTitleHint">Advert Title</string>
+    <string name="categoryHint">Pick Item Category</string>
+    <string name="itemDiscriptionHint">Describe Your Item</string>
+    <string name="locationHint">Choose your Location</string>
+    <string name="amount">Amount</string>
+    <string name="ownerNameHint">Your Name</string>
+    <string name="mobileNumberHint">Your Mobile Number</string>
+    <string name="declarationSting">I Declare that have read and AGREE to ALL term and Condition</string>
+    <string name="btnText">Post Advert</string>
+
+    <string name="error_advertTitle">Advert title is require</string>
+    <string name="error_advertCategory">Select your advert Category</string>
+    <string name="error_advertDescription">Enter Advert Description</string>
+    <string name="error_lessAdvertDiscription">Provide enough Description</string>
+    <string name="error_amount">Enter Selling Price</string>
+    <string name="error_mobile">Provide Contact Number</string>
+    <string name="error_name">Provide your Name</string>
+    <string name="no_image">Adverts with an Image have an high probality to sale</string>
+
+    <string name="terms">Agree to Terms and condition Before Uploading your product</string>
+    <string name="welcomeString">Discover,Plan and Inform With MadDiscovery</string>
+
+    <!--Event strings-->
+    <string name="eventTitleHint">Enter Event Name (Title)</string>
+    <string name="eventVenueHint">Event Venue</string>
+    <string name="eventCategory">Select Event Category</string>
+    <string name="eventDescriptionEvent">Event Discription</string>
+    <string name="eventDateHint">Date Of the Event</string>
+    <string name="dateFrom">From</string>
+    <string name="dateTo">To</string>
+    <string name="eventTimeHint">Time of the Event</string>
+    <string name="timeFrom">Start Time</string>
+    <string name="timeTo">End Time</string>
+    <string name="eventOrganizerHint">Event Organizers (Sponsers)</string>
+    <string name="submitEvent">Upload Event</string>
+
+    <string name="eventDialogTitle">Select Event Category</string>
+    <string name="eventDialogFilterTitle">Filter Event By Category </string>
+    <string-array name="eventCategory">
+        <item>Social Event</item>
+        <item>Community Service</item>
+        <item>Agricultural</item>
+        <item>Technology</item>
+        <item>Educational</item>
+        <item>Christianity</item>
+        <item>Adventure</item>
+        <item>General Event</item>
+    </string-array>
+    <string name="cancel">Cancel</string>
+
+    <string name="error_eventTitle">Event Title required</string>
+    <string name="error_eventVenue">Event Venue Required</string>
+    <string name="error_eventDescription">Event Description Required</string>
+    <string name="error_eventDate">Date Required</string>
+    <string name="error_eventTime">Time Required</string>
+    <string name="error_organizers">Organizere Required</string>
+    <string name="no_contact_provided">No Contacts will be Available to contact you</string>
+    <string name="error_category">Please select Event Category</string>
+    <string name="non_connection"> Check you internet connection </string>
+    <string name="connect_try"> Please Check you internet connection and Try Again </string>
+    <string name="retry">RETRY</string>
+
+    <string name="title_sell">Sale  Item</string>
+    <string name="title_adverts">On Market</string>
+    <string name="title_event">Upload Event</string>
+    <string name="event_list">Upcomming Events</string>
+    <string name="title_login">Login</string>
+    <string name="title_activity_home">Mad Discovery</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="progress_dialog_loading">Please Wait</string>
+    <string name="progress_dialog_authenticating_with_firebase">Getting Authentication</string>
+
+    <!-- Google Errors -->
+    <string name="google_error_recoverable_oauth_error">"Recoverable Google OAuth error: "</string>
+    <string name="google_error_google_play_services_not_available">Google Play Services are not available.</string>
+    <string name="google_error_trying_to_connect_google_api">Trying to connect to Google API</string>
+    <string name="google_error_auth_with_google">"Error authenticating with Google: "</string>
+    <string name="google_error_network_error">"Network error: "</string>
+    <string name="google_error_cant_connect_to_api">Are you sure that you set up a project for your app?
+        Check out : https://console.developers.google.com/project. Also make sure you have all the proper
+    gradle dependencies</string>
+
+    <!-- OAuth Format -->
+    <string name="oauth2_format">oauth2:%s</string>
+    <string name="auth_failed">user not greated</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_event__list">Event_List</string>
+    <string name="title_activity_index">Index</string>
+
+    <!--strings for navigation  drawer menu-->
+    <string name="advertsMenu">Advertsments</string>
+    <string name="addAdvertMenu">add Advertsment</string>
+    <string name="eventsMenu">Events</string>
+    <string name="addEventMenu">Add Event</string>
+    <string name="loginMenu">Login</string>
+    <!--string for general usage on all strings common in the  Event classes-->
+    <string name="venue">VENUE</string>
+    <string name="category">Category</string>
+    <string name="date">DATE</string>
+    <string name="time">TIME</string>
+    <string name="topEvent">Top Upcomming Events</string>
+</resources>

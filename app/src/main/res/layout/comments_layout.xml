@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="5dp"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/accountThumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/user_account"
+        android:layout_margin="2dp"
+        app:civ_border_width="1dp"
+        app:civ_border_color="#fff"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/username"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="italic"
+        android:layout_toRightOf="@+id/accountThumbnail"
+        android:text="Christopher mulwa"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:padding="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/comment"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/accountThumbnail"
+        android:text="This is ia dummy text from christopher mulwa the" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_toEndOf="@+id/accountThumbnail"
+        android:layout_toRightOf="@+id/accountThumbnail"
+        android:orientation="horizontal"
+        android:layout_below="@+id/comment">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="like"
+            android:padding="10dp"
+            android:background="@drawable/logo_googleg_color_18dp"
+            android:layout_marginRight="15dp"
+            android:id="@+id/ib_like"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+10"
+            android:padding="5dp"
+            android:layout_marginRight="15dp"
+            android:textSize="12sp"
+            android:id="@+id/tv_count"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/logo_googleg_color_18dp"
+            android:text="Dislike"
+            android:id="@+id/ib_dislike"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:fontFamily="sans-serif-light"
+        android:id="@+id/date"
+        android:layout_below="@+id/comment"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="2016-12-20"/>
+
+
+
+
+</RelativeLayout>

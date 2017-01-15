@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:id="@+id/coordinatorLayout"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.cj_sever.merchandisers.MoreEventDetails">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/appbar"
+        android:layout_height="250dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/collapsingToolBar"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="centerCrop"
+                    app:layout_collapseMode="parallax"
+                    android:id="@+id/collapsingImage"/>
+            </RelativeLayout>
+
+            <include
+                layout="@layout/toolbar"
+                android:id="@+id/toolbar"></include>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffe5e5e5"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="5dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:textSize="18sp"
+                        android:textStyle="normal"
+                        android:lineSpacingExtra="5dp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical|end"
+                        android:fontFamily="sans-serif-light"
+                        android:id="@+id/tvdescription"
+                        android:text="@string/com_facebook_image_download_unknown_error"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_below="@+id/tvdescription"
+                        android:fontFamily="sans-serif-condensed"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvcategory"
+                        android:textSize="16sp"
+                        android:textStyle="italic"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/black"
+                        android:text="Event type:Technology,Business,social event"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvcategory">
+                        <TextView
+                            style="@style/EventPopTextView"
+                            android:id="@+id/tvvenue"
+                            android:textSize="14sp"
+                            android:layout_alignParentLeft="true"
+                            android:fontFamily="sans-serif-light"
+                            android:text="@string/venue"/>
+                        <TextView
+                            style="@style/EventPopTextView"
+                            android:layout_below="@+id/tvvenue"
+                            android:id="@+id/tvdate"
+                            android:fontFamily="sans-serif-light"
+                            android:textSize="14sp"
+                            android:text="@string/date"/>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                   <ImageButton
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_centerInParent="true"
+                       android:id="@+id/ibshare"
+                       android:background="@drawable/share"/>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/call_icon"/>
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ibcall"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/call_icon"/>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/comment_bottom_sheet_view"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/bottom_sheet_color">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:textColor="@color/bgcolor"
+            android:text="Event Comments"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/commentList"/>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="3"
+                android:padding="@dimen/activity_vertical_margin"
+                android:background="@color/bottom_sheet_color"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/commentEntryLayout">
+
+                <EditText
+                    android:id="@+id/edtComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="top|left"
+                    android:hint="Enter Event description"
+                    android:inputType="textMultiLine"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:padding="5dp"
+                    android:lines="4"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:scrollHorizontally="false" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/edtComment"
+                    android:id="@+id/btnComment"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content"
+                    android:text="Comment"/>
+            </RelativeLayout>
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
+
