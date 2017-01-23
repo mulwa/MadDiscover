@@ -39,6 +39,14 @@
             android:id="@+id/filter_title"
             android:hint="TOP EVENTS"
             />
+        <TextView
+            style="@style/TextViewTitle"
+            android:id="@+id/tv_null_display"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="No events found from this Categoty"
+            />
 
 
         <android.support.v7.widget.RecyclerView

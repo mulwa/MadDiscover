@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:text="like"
             android:padding="10dp"
-            android:background="@drawable/logo_googleg_color_18dp"
+            android:background="@drawable/thumb_up"
             android:layout_marginRight="15dp"
             android:id="@+id/ib_like"/>
         <TextView
@@ -66,7 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:background="@drawable/logo_googleg_color_18dp"
+            android:background="@drawable/ic_action_name"
             android:text="Dislike"
             android:id="@+id/ib_dislike"/>
 

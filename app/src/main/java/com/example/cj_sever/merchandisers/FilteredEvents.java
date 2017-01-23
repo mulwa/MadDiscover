@@ -22,9 +22,12 @@ import android.widget.Toast;
 
 import com.example.cj_sever.merchandisers.Models.Event;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
@@ -40,6 +43,7 @@ public class FilteredEvents extends AppCompatActivity {
     private Query mDatabaseReference;
     private String categoryFilter;
     private TextView mtitle;
+    private TextView m_null_results;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +62,7 @@ public class FilteredEvents extends AppCompatActivity {
         stringBuilder.append(getString(R.string.event_list));
         mtitle.setText(stringBuilder);
         database = FirebaseDatabase.getInstance();
-        mDatabaseReference = database.getReference(EVENTS).getRef().orderByChild(Constants.EVENT_START_TIME).limitToFirst(4);
+        mDatabaseReference = database.getReference(EVENTS).getRef().orderByChild(Constants.EVENT_CATEGORY).equalTo(categoryFilter);
         fetchEvents();
     }
     private void findview(){
@@ -73,6 +77,8 @@ public class FilteredEvents extends AppCompatActivity {
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         mtitle = (TextView) findViewById(R.id.filter_title);
+        m_null_results = (TextView) findViewById(R.id.tv_null_display);
+        m_null_results.setVisibility(View.GONE);
 
     }
 
@@ -131,6 +137,7 @@ public class FilteredEvents extends AppCompatActivity {
             protected void populateViewHolder(final viewHolder viewHolder, final Event event, int i) {
                 progressBar.setVisibility(View.GONE);
 
+
                 final String image = event.getImage();
 
                 viewHolder.mTitle.setText(event.getTitle());
@@ -187,6 +194,21 @@ public class FilteredEvents extends AppCompatActivity {
         };
 
         recyclerView.setAdapter(firebaseadapter);
+        mDatabaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if(!dataSnapshot.hasChildren()){
+                    progressBar.setVisibility(View.GONE);
+                    mtitle.setVisibility(View.GONE);
+                    m_null_results.setVisibility(View.VISIBLE);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
 
 
     }

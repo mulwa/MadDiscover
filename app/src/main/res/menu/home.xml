@@ -8,7 +8,7 @@
         app:showAsAction="never" />
     <item
         android:id="@+id/filter"
-        android:icon="@drawable/share"
+        android:icon="@drawable/ic_action_search"
         android:title="filter"
         app:showAsAction="ifRoom"/>
 </menu>

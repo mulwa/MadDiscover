@@ -183,6 +183,7 @@ public class TopEvents extends AppCompatActivity
             m_connection_error.setVisibility(View.VISIBLE);
             b_try_Again.setVisibility(View.VISIBLE);
             m_event_progressBar.setVisibility(View.INVISIBLE);
+            mtitle.setVisibility(View.INVISIBLE);
 
         }
     }
@@ -327,6 +328,7 @@ public class TopEvents extends AppCompatActivity
                     Intent filterIntent = new Intent(TopEvents.this,FilteredEvents.class);
                     filterIntent.putExtra(Constants.filter_category,selectedCategory);
                     startActivity(filterIntent);
+
                 }
 
             }
