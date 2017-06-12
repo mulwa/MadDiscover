@@ -37,40 +37,7 @@
         android:layout_toRightOf="@+id/accountThumbnail"
         android:text="This is ia dummy text from christopher mulwa the" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:layout_toEndOf="@+id/accountThumbnail"
-        android:layout_toRightOf="@+id/accountThumbnail"
-        android:orientation="horizontal"
-        android:layout_below="@+id/comment">
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="like"
-            android:padding="10dp"
-            android:background="@drawable/thumb_up"
-            android:layout_marginRight="15dp"
-            android:id="@+id/ib_like"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="+10"
-            android:padding="5dp"
-            android:layout_marginRight="15dp"
-            android:textSize="12sp"
-            android:id="@+id/tv_count"/>
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:background="@drawable/ic_action_name"
-            android:text="Dislike"
-            android:id="@+id/ib_dislike"/>
-
-    </LinearLayout>
 
 
     <TextView

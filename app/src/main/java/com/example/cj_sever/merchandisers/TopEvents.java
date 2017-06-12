@@ -269,18 +269,7 @@ public class TopEvents extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
-        if (id == R.id.adverts) {
-            // Handle the camera action
-            openAdverts();
-
-        } else if (id == R.id.addAdvert) {
-            addAdvert();
-
-        } else if (id == R.id.events) {
-            listEvent();
-
-        } else if (id == R.id.addEvent) {
+          if (id == R.id.addEvent) {
             addEvent();
 
         } else if (id == R.id.login) {
@@ -294,26 +283,12 @@ public class TopEvents extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-    private void openAdverts(){
-        startActivity( new Intent(TopEvents.this,MainActivity.class));
-        finish();
-
-
-    }
-    private void addAdvert(){
-        startActivity(new Intent(TopEvents.this,Add_advert.class));
-        finish();
-    }
     private void addEvent(){
         startActivity(new Intent(TopEvents.this,Add_event.class));
         finish();
     }
     private void log_in(){
         startActivity(new Intent(TopEvents.this,Login.class));
-        finish();
-    }
-    private void listEvent(){
-        startActivity(new Intent(TopEvents.this,Event_List.class));
         finish();
     }
     private void popFilter(){

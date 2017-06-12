@@ -39,6 +39,7 @@ public final class Constants {
 //    firebase database nodes
     public static final String comments_node = "Comments";
     public static final String event_node = "Events";
+    public static  final String like_node ="Likes";
 
 
 

@@ -9,16 +9,13 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Add_advert"
             android:windowSoftInputMode="stateHidden" />
@@ -30,10 +27,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".Add_event" />
-        <activity
-            android:name=".Event_List"
-            android:label="@string/title_activity_event__list"
-            android:theme="@style/AppTheme" />
         <activity
             android:name=".TopEvents"
             android:label="@string/title_activity_home"

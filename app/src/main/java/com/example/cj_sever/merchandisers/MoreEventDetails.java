@@ -33,6 +33,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.cj_sever.merchandisers.Models.Comment;
+import com.example.cj_sever.merchandisers.Models.Like;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -307,18 +308,7 @@ public class MoreEventDetails extends AppCompatActivity {
                         .load(model.getUserPhoto())
                         .into(viewHolder.m_photo_url);
 
-                viewHolder.m_dislike.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        GeneralFunctions.makeToast(getApplicationContext(),"dislike not ready");
-                    }
-                });
-                viewHolder.m_like.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        GeneralFunctions.makeToast(getApplicationContext(),"like function not ready");
-                    }
-                });
+
 
             }
         };
@@ -393,9 +383,7 @@ public class MoreEventDetails extends AppCompatActivity {
             m_username = (TextView) itemView.findViewById(R.id.username);
             m_photo_url = (CircleImageView) itemView.findViewById(R.id.accountThumbnail);
 
-            m_like = (ImageButton) itemView.findViewById(R.id.ib_like);
-            m_dislike = (ImageButton) itemView.findViewById(R.id.ib_dislike);
-            m_count = (TextView) itemView.findViewById(R.id.tv_count);
+
         }
     }
 }

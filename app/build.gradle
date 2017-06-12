@@ -25,7 +25,7 @@ dependencies {
     compile files('libs/PhotoUtil.jar')
     compile files('libs/PhotoUtil.jar')
     // CardView ans RecyclerView
-    compile 'com.android.support:palette-v7:24.0.+'
+    compile 'com.android.support:palette-v7:24.0.0'
 
 //    for firebase authentication and google sign in
     compile'com.google.android.gms:play-services-auth:9.4.0'
@@ -46,6 +46,7 @@ dependencies {
 
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'jp.wasabeef:picasso-transformations:2.1.0'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
 }
 apply plugin: 'com.google.gms.google-services'
 

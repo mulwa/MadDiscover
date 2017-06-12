@@ -3,18 +3,6 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/adverts"
-            android:icon="@mipmap/view"
-            android:title="@string/advertsMenu" />
-        <item
-            android:id="@+id/addAdvert"
-            android:icon="@mipmap/view"
-            android:title="@string/addAdvertMenu" />
-        <item
-            android:id="@+id/events"
-            android:icon="@mipmap/view"
-            android:title="@string/eventsMenu" />
-        <item
             android:id="@+id/addEvent"
             android:icon="@mipmap/view"
             android:title="@string/addEventMenu" />
